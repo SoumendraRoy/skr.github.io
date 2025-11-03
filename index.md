@@ -7,7 +7,6 @@ My research focuses on **gravitational-wave population inference** and the **ast
 ---
 
 ### 🔗 Links
-- 📄 [Curriculum Vitae](cv.pdf)
 - 📝 [Publications](publications.md)
 - 💬 [Contact](contact.md)
 
