@@ -10,12 +10,10 @@
 
     <meta
         name="description"
-        content="Soumendra Kishore Roy — CITA Postdoctoral Fellow studying gravitational-wave astrophysics, binary black-hole populations, black-hole formation, and cosmology."
+        content="Contact information and academic profiles for Soumendra Kishore Roy."
     >
 
-    <title>
-        Soumendra Kishore Roy | Gravitational-Wave Astrophysicist
-    </title>
+    <title>Contact | Soumendra Kishore Roy</title>
 
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -40,7 +38,7 @@
             </button>
 
             <nav class="main-navigation" aria-label="Main navigation">
-                <a class="active" href="index.html">Home</a>
+                <a href="index.html">Home</a>
                 <a href="research.html">Research</a>
                 <a href="talks.html">Talks</a>
                 <a href="publications.html">Publications</a>
@@ -54,112 +52,45 @@
     </header>
 
 
-    <main>
+    <main class="page-main">
 
-        <section class="hero home-hero">
+        <section class="page-hero">
 
-            <div class="container home-grid">
+            <div class="container">
 
+                <p class="eyebrow">
+                    Soumendra Kishore Roy
+                </p>
 
-                <!-- Portrait column -->
+                <h1>Contact</h1>
 
-                <div class="home-portrait">
+                <p class="page-introduction">
+                    Contact information and links to academic and
+                    professional profiles.
+                </p>
 
-                    <div class="portrait-roles">
+            </div>
 
-                        <p class="portrait-role">
-                            CITA Postdoctoral Fellow
-                        </p>
+        </section>
 
-                        <p class="portrait-role">
-                            & Canada Impact+ Fellow
-                        </p>
+        <section class="page-content">
 
-                    </div>
+            <div class="container">
 
-                    <img
-                        class="profile-photo"
-                        src="images/profile-photo.png"
-                        alt="Portrait of Soumendra Kishore Roy"
-                    >
+                <div class="placeholder-panel">
 
-                </div>
-
-
-                <!-- Introduction and research question -->
-
-                <div class="home-content">
-
-                    <p class="home-intro">
-                        I am currently a CITA Postdoctoral Fellow working in gravitational-wave astrophysics. 
-                        I completed my Ph.D. at Stony Brook University under the supervision of Professor Will Farr. 
-                        I received Bachelor of Science and Master of Science degrees in Physics from 
-                        Presidency University in Kolkata, India.
+                    <p class="eyebrow">
+                        Get in touch
                     </p>
 
-                    <p class="question-introduction">
-                        My research aims to answer the broad question:
+                    <h2>
+                        Contact details coming soon
+                    </h2>
+
+                    <p>
+                        My email address, institutional affiliation, and
+                        academic profiles will be available here.
                     </p>
-
-
-                    <!-- Overlaid waveform and question -->
-
-                    <div class="question-visual">
-
-                        <div
-                            class="question-waveform"
-                            aria-hidden="true"
-                        >
-
-                            <svg
-                                viewBox="0 0 1200 240"
-                                preserveAspectRatio="none"
-                            >
-                                <path
-                                    d="
-                                    M0 120
-                                    C180 120, 230 120, 330 120
-                                    C390 120, 410 105, 450 120
-                                    C490 138, 515 65, 550 120
-                                    C585 180, 610 25, 645 120
-                                    C680 225, 710 -5, 745 120
-                                    C775 170, 800 85, 830 120
-                                    C860 145, 890 105, 920 120
-                                    C970 125, 1020 118, 1070 120
-                                    C1120 121, 1160 120, 1200 120
-                                    "
-                                />
-                            </svg>
-
-                        </div>
-
-                        <h1 class="research-question-title">
-                            <span>Where do binary black hole</span>
-                            <span>mergers come from?</span>
-                        </h1>
-
-                    </div>
-
-
-                    <!-- Homepage buttons -->
-
-                    <div class="hero-actions">
-
-                        <a
-                            class="button primary"
-                            href="research.html"
-                        >
-                            Explore my research
-                        </a>
-
-                        <a
-                            class="button primary"
-                            href="publications.html"
-                        >
-                            View publications
-                        </a>
-
-                    </div>
 
                 </div>
 
@@ -311,22 +242,23 @@
 
         menuButton.addEventListener("click", () => {
             const isOpen = navigation.classList.toggle("open");
-
-            menuButton.setAttribute(
-                "aria-expanded",
-                isOpen
-            );
+            menuButton.setAttribute("aria-expanded", isOpen);
         });
 
         navigation.querySelectorAll("a").forEach((link) => {
             link.addEventListener("click", () => {
                 navigation.classList.remove("open");
-
-                menuButton.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
+                menuButton.setAttribute("aria-expanded", "false");
             });
+        });
+
+        const currentPage =
+            window.location.pathname.split("/").pop() || "index.html";
+
+        navigation.querySelectorAll("a").forEach((link) => {
+            if (link.getAttribute("href") === currentPage) {
+                link.classList.add("active");
+            }
         });
     </script>
 
