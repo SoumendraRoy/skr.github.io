@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
 
@@ -10,7 +11,7 @@
 
     <meta
         name="description"
-        content="Contact information and academic profiles for Soumendra Kishore Roy."
+        content="Contact information for Soumendra Kishore Roy."
     >
 
     <title>Contact | Soumendra Kishore Roy</title>
@@ -44,7 +45,7 @@
                 <a href="publications.html">Publications</a>
                 <a href="cv.html">CV</a>
                 <a href="dumping-ground.html">Dumping Ground</a>
-                <a href="contact.html">Contact</a>
+                <a class="active" href="contact.html">Contact</a>
             </nav>
 
         </div>
@@ -52,44 +53,52 @@
     </header>
 
 
-    <main class="page-main">
+    <main class="page-main contact-page">
 
         <section class="page-hero">
 
             <div class="container">
 
-                <p class="eyebrow">
-                    Soumendra Kishore Roy
-                </p>
-
                 <h1>Contact</h1>
-
-                <p class="page-introduction">
-                    Contact information and links to academic and
-                    professional profiles.
-                </p>
 
             </div>
 
         </section>
 
-        <section class="page-content">
 
-            <div class="container">
+        <section class="page-content contact-section">
 
-                <div class="placeholder-panel">
+            <div class="container contact-details">
 
-                    <p class="eyebrow">
-                        Get in touch
-                    </p>
+                <div class="contact-block">
 
-                    <h2>
-                        Contact details coming soon
-                    </h2>
+                    <h2>Office</h2>
+
+                    <address>
+                        Canadian Institute for Theoretical Astrophysics<br>
+                        MP 1312<br>
+                        60 St. George Street<br>
+                        Toronto, ON M5S 3H8<br>
+                        Canada
+                    </address>
+
+                </div>
+
+
+                <div class="contact-block">
+
+                    <h2>Email</h2>
 
                     <p>
-                        My email address, institutional affiliation, and
-                        academic profiles will be available here.
+                        <a href="mailto:sroy@cita.utoronto.ca">
+                            sroy@cita.utoronto.ca
+                        </a>
+                    </p>
+
+                    <p>
+                        <a href="mailto:soumendra.roy@utoronto.ca">
+                            soumendra.roy@utoronto.ca
+                        </a>
                     </p>
 
                 </div>
@@ -130,8 +139,9 @@
                     </svg>
                 </a>
 
+
                 <a
-                    href="https://ui.adsabs.harvard.edu/search/q=orcid%3A0000-0001-9295-5119&sort=date%20desc%2C%20bibcode%20desc&p_=0"
+                    href="https://ui.adsabs.harvard.edu/search/q=orcid%3A0000-0001-9295-5119&amp;sort=date%20desc%2C%20bibcode%20desc&amp;p_=0"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Soumendra Kishore Roy on NASA ADS"
@@ -162,6 +172,7 @@
                         </text>
                     </svg>
                 </a>
+
 
                 <a
                     href="https://inspirehep.net/authors/2902559"
@@ -195,6 +206,7 @@
                         </text>
                     </svg>
                 </a>
+
 
                 <a
                     href="https://orcid.org/0000-0001-9295-5119"
@@ -251,16 +263,8 @@
                 menuButton.setAttribute("aria-expanded", "false");
             });
         });
-
-        const currentPage =
-            window.location.pathname.split("/").pop() || "index.html";
-
-        navigation.querySelectorAll("a").forEach((link) => {
-            if (link.getAttribute("href") === currentPage) {
-                link.classList.add("active");
-            }
-        });
     </script>
 
 </body>
+
 </html>

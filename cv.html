@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
 
     <meta
@@ -10,15 +12,18 @@
 
     <meta
         name="description"
-        content="Curriculum vitae of Soumendra Kishore Roy."
+        content="Curriculum vitae of Soumendra Kishore Roy, CITA Postdoctoral Fellow working in gravitational-wave astrophysics."
     >
 
     <title>CV | Soumendra Kishore Roy</title>
 
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 
+
 <body>
+
 
     <header class="site-header">
 
@@ -38,13 +43,23 @@
             </button>
 
             <nav class="main-navigation" aria-label="Main navigation">
+
                 <a href="index.html">Home</a>
+
                 <a href="research.html">Research</a>
+
                 <a href="talks.html">Talks</a>
+
                 <a href="publications.html">Publications</a>
-                <a href="cv.html">CV</a>
-                <a href="dumping-ground.html">Dumping Ground</a>
+
+                <a class="active" href="cv.html">CV</a>
+
+                <a href="dumping-ground.html">
+                    Dumping Ground
+                </a>
+
                 <a href="contact.html">Contact</a>
+
             </nav>
 
         </div>
@@ -52,45 +67,23 @@
     </header>
 
 
-    <main class="page-main">
+    <main class="page-main cv-page">
 
         <section class="page-hero">
 
             <div class="container">
 
-                <p class="eyebrow">
-                    Soumendra Kishore Roy
-                </p>
+                <h1>CV</h1>
 
-                <h1>Curriculum Vitae</h1>
+                <div class="cv-actions">
 
-                <p class="page-introduction">
-                    Academic experience, research appointments, education,
-                    and professional activities.
-                </p>
-
-            </div>
-
-        </section>
-
-        <section class="page-content">
-
-            <div class="container">
-
-                <div class="placeholder-panel">
-
-                    <p class="eyebrow">
-                        CV
-                    </p>
-
-                    <h2>
-                        Curriculum vitae coming soon
-                    </h2>
-
-                    <p>
-                        A downloadable version of my curriculum vitae will
-                        be available here.
-                    </p>
+                    <a
+                        class="button primary"
+                        href="files/Soumendra_cv.pdf"
+                        download
+                    >
+                        Download CV
+                    </a>
 
                 </div>
 
@@ -109,7 +102,11 @@
                 © 2026 Soumendra Kishore Roy
             </p>
 
+
             <div class="footer-social">
+
+
+                <!-- GitHub -->
 
                 <a
                     href="https://github.com/SoumendraRoy"
@@ -129,6 +126,9 @@
                         />
                     </svg>
                 </a>
+
+
+                <!-- NASA ADS -->
 
                 <a
                     href="https://ui.adsabs.harvard.edu/search/q=orcid%3A0000-0001-9295-5119&sort=date%20desc%2C%20bibcode%20desc&p_=0"
@@ -163,6 +163,9 @@
                     </svg>
                 </a>
 
+
+                <!-- INSPIRE-HEP -->
+
                 <a
                     href="https://inspirehep.net/authors/2902559"
                     target="_blank"
@@ -195,6 +198,9 @@
                         </text>
                     </svg>
                 </a>
+
+
+                <!-- ORCID -->
 
                 <a
                     href="https://orcid.org/0000-0001-9295-5119"
@@ -229,6 +235,7 @@
                     </svg>
                 </a>
 
+
             </div>
 
         </div>
@@ -237,30 +244,45 @@
 
 
     <script>
-        const menuButton = document.querySelector(".menu-button");
-        const navigation = document.querySelector(".main-navigation");
+
+        const menuButton =
+            document.querySelector(".menu-button");
+
+        const navigation =
+            document.querySelector(".main-navigation");
+
 
         menuButton.addEventListener("click", () => {
-            const isOpen = navigation.classList.toggle("open");
-            menuButton.setAttribute("aria-expanded", isOpen);
+
+            const isOpen =
+                navigation.classList.toggle("open");
+
+            menuButton.setAttribute(
+                "aria-expanded",
+                isOpen
+            );
+
         });
 
+
         navigation.querySelectorAll("a").forEach((link) => {
+
             link.addEventListener("click", () => {
+
                 navigation.classList.remove("open");
-                menuButton.setAttribute("aria-expanded", "false");
+
+                menuButton.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
             });
+
         });
 
-        const currentPage =
-            window.location.pathname.split("/").pop() || "index.html";
-
-        navigation.querySelectorAll("a").forEach((link) => {
-            if (link.getAttribute("href") === currentPage) {
-                link.classList.add("active");
-            }
-        });
     </script>
 
+
 </body>
+
 </html>
