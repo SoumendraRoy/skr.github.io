@@ -2436,3 +2436,29 @@ button:focus-visible {
     }
 
 }
+/* Contact details: two-column layout */
+
+.contact-details {
+    display: grid;
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+    gap: 80px;
+    align-items: start;
+    max-width: 1050px;
+}
+
+.contact-block address {
+    font-style: normal;
+}
+
+.contact-block h2 {
+    margin-top: 0;
+}
+
+@media (max-width: 700px) {
+
+    .contact-details {
+        grid-template-columns: 1fr;
+        gap: 42px;
+    }
+
+}
